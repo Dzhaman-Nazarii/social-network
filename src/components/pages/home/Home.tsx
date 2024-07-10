@@ -5,7 +5,7 @@ export const Home:FC = () => {
 	return (
 		<>
 		<h1>Home page</h1>
-		<Button variant="contained">Hello world</Button>;
+		<Button variant="contained">Hello world</Button>
 		</>
 	)
 }
