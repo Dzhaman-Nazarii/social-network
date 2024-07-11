@@ -1,11 +1,17 @@
-import { FC } from "react";
-import Button from '@mui/material/Button';
+import { FC, useState } from "react";
+import { AddPost } from "./AddPost";
+import { Box } from "@mui/material";
+import { IPost } from "../../../types";
+import Posts from "./Posts";
+import { initialPosts } from "./initialPosts";
 
 export const Home:FC = () => {
+	const [posts, setPosts] = useState<IPost[]>(initialPosts);
+	
 	return (
-		<>
-		<h1>Home page</h1>
-		<Button variant="contained">Hello world</Button>
-		</>
+		<Box>
+			<AddPost setPosts={setPosts}/>
+			<Posts posts={posts}></Posts>
+		</Box>
 	)
 }

@@ -1,6 +1,7 @@
 import * as Icons from '@mui/icons-material';
+import { IMenuItem } from '../../../types';
 
-export const dataMenu = [
+export const dataMenu: IMenuItem[] = [
 	{
 		title: 'My page',
 		link: '/profile',
