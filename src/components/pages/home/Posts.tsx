@@ -7,7 +7,7 @@ interface IPosts {
 	posts: IPost[];
 }
 
-const Posts: FC<IPosts> = ({ posts }) => {
+export const Posts: FC<IPosts> = ({ posts }) => {
 	const formatCreatedAt = (createdAt: Date) => {
 		const options: Intl.DateTimeFormatOptions = {
 			year: 'numeric',
@@ -93,4 +93,3 @@ const Posts: FC<IPosts> = ({ posts }) => {
 	);
 };
 
-export default Posts;
