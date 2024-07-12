@@ -1,0 +1,47 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #34ACDF;
+	padding: 1.2rem 3rem 0.6rem;
+}
+
+header > .imageWrapper{
+	width: 25%;
+}
+
+.header > .imageWrapper > img {
+	width: 40px;
+	height: 40px;
+}
+
+.header > .inputWrapper {
+	position: relative;
+	margin-left: 16px;
+	width: calc(75% - 16px);
+	border-radius: 30px;
+	background-color: #005BBB;
+}
+
+.header > .inputWrapper > input {
+	width: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px;
+}
+
+.header > .inputWrapper > input::placeholder {
+	color: #9cb1d7;
+}
+
+
+.header > .inputWrapper > svg {
+	fill: #9cb1d7 !important;
+	position: absolute;
+	top: 7px;
+	left: 46%;
+}
