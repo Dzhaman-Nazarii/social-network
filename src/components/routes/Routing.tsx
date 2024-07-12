@@ -3,15 +3,16 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import { routes } from "./list";
 import { Layout } from "../layout/Layout";
 import { Home } from "../pages/home/Home"; // Adjust import paths accordingly
+import { useAuth } from "../providers/useAuth";
 
 export const Routing: FC = () => {
-  const isAuth = true;
+  const {user} = useAuth();
 
   return (
     <Router>
       <Routes>
         {routes.map((route) => {
-          if (route.auth && !isAuth) {
+          if (route.auth && !user) {
             return <Route key={route.path} path={route.path} element={<Navigate to="/auth" />} />;
           }
           return (

@@ -4,7 +4,7 @@ import BorysJohnsonPhoto from '../../../img/Boris_Johnson.jpg'
 export const initialPosts: IPost[] = [
 	{
 		author: {
-			id: 12,
+			id: '176572',
 			avatar: BorysJohnsonPhoto,
 			name: 'Peace for Ukraine',
 			isOnline: true
