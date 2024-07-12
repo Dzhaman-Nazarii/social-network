@@ -69,7 +69,7 @@ export const Auth: FC = () => {
 				alignItems="center">
 				<form
 					onSubmit={handleLogin}
-					style={{ width: "60%" }}>
+					style={{width: '30%'}}>
 					<TextField
 						type="email"
 						label="Email"
@@ -100,11 +100,13 @@ export const Auth: FC = () => {
 					/>
 					<ButtonGroup variant="outlined">
 						<Button
+							style={{width: '105px'}}
 							type="submit"
 							onClick={() => setIsRegForm(false)}>
 							Auth
 						</Button>
 						<Button
+							style={{width: '105px'}}
 							type="submit"
 							onClick={() => setIsRegForm(true)}>
 							Register

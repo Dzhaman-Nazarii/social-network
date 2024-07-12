@@ -1,12 +1,14 @@
 import { FC } from "react";
 import { UserItems } from "./UserItems";
 import { Menu } from "./Menu";
+import { User } from "./User";
 
 export const Sidebar: FC = () => {
 	return (
 		<>
-			<UserItems/>
-			<Menu/>
+			<User />
+			<UserItems />
+			<Menu />
 		</>
 	);
 };
