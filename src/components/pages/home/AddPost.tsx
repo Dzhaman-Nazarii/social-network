@@ -10,7 +10,7 @@ interface IAddPost {
 	setPosts: TypeSetState<IPost[]>;
 }
 
-export const AddPost: FC<IAddPost> = ({ setPosts }) => {
+export const AddPost: FC<IAddPost> = () => {
 	const { user } = useAuth();
 	const [content, setContent] = useState("");
 	const [error, setError] = useState<string | null>(null);

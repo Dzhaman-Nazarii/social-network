@@ -2,6 +2,7 @@ import { FC } from "react";
 import { IPost } from "../../../types";
 import { Avatar, Box, ImageList, ImageListItem } from "@mui/material";
 import { Link } from "react-router-dom";
+import { Card } from "../../ui/Card";
 
 interface IPostsProps {
   posts: IPost[];
@@ -25,14 +26,7 @@ export const Posts: FC<IPostsProps> = ({ posts }) => {
   return (
     <>
       {sortedPosts.map((post, index) => (
-        <Box
-          key={`Post-${index}`}
-          sx={{
-            border: "1px solid #ccc",
-            borderRadius: "10px",
-            padding: 2,
-            marginTop: 3,
-          }}>
+        <Card key={`Post - ${index}`}>
           <Link
             to={`/profile/${post.author.id}`}
             style={{
@@ -90,7 +84,7 @@ export const Posts: FC<IPostsProps> = ({ posts }) => {
               ))}
             </ImageList>
           )}
-        </Box>
+        </Card>
       ))}
     </>
   );
