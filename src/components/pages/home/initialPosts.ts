@@ -10,6 +10,6 @@ export const initialPosts: IPost[] = [
 			isOnline: true
 		},
 		createdAt: new Date(),
-		content: 'Thank you for your interest.  We are a loose collective of like-minded musicians, hoping that our supporters will join together to help ease the suffering in war-torn Ukraine.',
+		content: 'Thank you for your interest. We are a loose collective of like-minded musicians, hoping that our supporters will join together to help ease the suffering in war-torn Ukraine.',
 	}
 ]

@@ -1,18 +1,24 @@
 import { Alert, Button, ButtonGroup, Grid, TextField } from "@mui/material";
 import { FC, SyntheticEvent, useState } from "react";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import {
+	createUserWithEmailAndPassword,
+	signInWithEmailAndPassword,
+	updateProfile
+} from "firebase/auth";
 import { useAuth } from "../../providers/useAuth";
 
 interface IUserData {
+	name: string;
 	email: string;
 	password: string;
 }
 
 export const Auth: FC = () => {
-	const {auth} = 	useAuth()
+	const { auth } = useAuth();
 
 	const [isRegForm, setIsRegForm] = useState(false);
 	const [userData, setUserData] = useState<IUserData>({
+		name: "",
 		email: "",
 		password: "",
 	});
@@ -24,11 +30,14 @@ export const Auth: FC = () => {
 
 		if (isRegForm) {
 			try {
-				await createUserWithEmailAndPassword(
+				const res = await createUserWithEmailAndPassword(
 					auth,
 					userData.email,
 					userData.password
 				);
+				await updateProfile(res.user, {
+					displayName: userData.name
+				})
 				console.log("User registered successfully");
 			} catch (err: unknown) {
 				if (err instanceof Error) {
@@ -55,21 +64,40 @@ export const Auth: FC = () => {
 		}
 		console.log(userData.email, userData.password);
 		setUserData({
+			name: "",
 			email: "",
-			password: "",
+			password: ""
 		});
 	};
 
 	return (
 		<>
-			{error && <Alert severity="error" style={{marginBottom: 20}}>{error}</Alert>}
+			{error && (
+				<Alert
+					severity="error"
+					style={{ marginBottom: 20 }}>
+					{error}
+				</Alert>
+			)}
 			<Grid
 				display="flex"
 				justifyContent="center"
 				alignItems="center">
 				<form
 					onSubmit={handleLogin}
-					style={{width: '30%'}}>
+					style={{ width: "30%" }}>
+					<TextField
+						label="Name"
+						variant="outlined"
+						value={userData.name}
+						onChange={(evt) =>
+							setUserData({
+								...userData,
+								name: evt.target.value,
+							})
+						}
+						sx={{ display: "block", marginBottom: 3 }}
+					/>
 					<TextField
 						type="email"
 						label="Email"
@@ -100,13 +128,13 @@ export const Auth: FC = () => {
 					/>
 					<ButtonGroup variant="outlined">
 						<Button
-							style={{width: '105px'}}
+							style={{ width: "105px" }}
 							type="submit"
 							onClick={() => setIsRegForm(false)}>
 							Auth
 						</Button>
 						<Button
-							style={{width: '105px'}}
+							style={{ width: "105px" }}
 							type="submit"
 							onClick={() => setIsRegForm(true)}>
 							Register

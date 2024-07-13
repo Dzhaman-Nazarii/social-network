@@ -23,7 +23,7 @@ export const AuthProvider: FC<IAuthProviderProps> = ({ children }) => {
     const unListen = onAuthStateChanged(auth, (authUser) => {
       setUser( authUser ?{
 		id: authUser?.uid,
-		avatar: users[1].avatar,
+		avatar: users[0].avatar,
 		name: authUser?.displayName || ''
 	  } :  null);
     });
