@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/social-network/static/css/main.5862a61a.css",
+    "main.js": "/social-network/static/js/main.f009afab.js",
+    "static/media/Bill_Gates.jpg": "/social-network/static/media/Bill_Gates.6c25467daafd6757aaf5.jpg",
+    "static/media/Brendan_Eich.jpg": "/social-network/static/media/Brendan_Eich.7c67385eb2d5885aa25c.jpg",
+    "static/media/Nazarii_Dzhaman.jpg": "/social-network/static/media/Nazarii_Dzhaman.4b016cdd1eeb4c6ac65f.jpg",
+    "static/media/Kateryna_Belma.jpg": "/social-network/static/media/Kateryna_Belma.f62a4780be0989bef093.jpg",
+    "static/media/Solomon_Hykes.jpg": "/social-network/static/media/Solomon_Hykes.517c7c4b4ae0104c2557.jpg",
+    "static/media/logo_Ukraine.svg": "/social-network/static/media/logo_Ukraine.56f747b900c466b588c216dd86d4ab3c.svg",
+    "index.html": "/social-network/index.html",
+    "main.5862a61a.css.map": "/social-network/static/css/main.5862a61a.css.map",
+    "main.f009afab.js.map": "/social-network/static/js/main.f009afab.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5862a61a.css",
+    "static/js/main.f009afab.js"
+  ]
+}
