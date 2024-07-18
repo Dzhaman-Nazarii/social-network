@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { Routing } from './components/routes/Routing';
+import { BrowserRouter } from 'react-router-dom';
 
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
@@ -27,7 +28,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <AuthProvider>
-      <Routing />
+      <BrowserRouter basename="/social-network">
+        <Routing />
+      </BrowserRouter>
     </AuthProvider>
   </React.StrictMode>
 );
