@@ -2,7 +2,7 @@
 	"name": "social-network",
 	"version": "0.1.0",
 	"private": true,
-  "homepage": "https://Dzhaman-Nazarii.github.io/social-network",
+	"homepage": "https://Dzhaman-Nazarii.github.io/social-network",
 	"dependencies": {
 		"@emotion/react": "^11.11.4",
 		"@emotion/styled": "^11.11.5",
@@ -16,7 +16,6 @@
 		"@types/react": "^18.3.3",
 		"@types/react-dom": "^18.3.0",
 		"firebase": "^10.12.3",
-		"gh-pages": "^6.1.1",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"react-firebase-hooks": "^5.1.1",
@@ -50,5 +49,8 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"gh-pages": "^6.1.1"
 	}
 }
